@@ -37,4 +37,9 @@ def energy_filter():
 
 
 if __name__ == '__main__':
+    LED_IN_PROGRESS_FLAG = 1
+    pixels.blink(rgb="r")
+    time.sleep(3)
+    pixels.wakeup()
+    LED_IN_PROGRESS_FLAG = 0
     app.run(debug=True, host='0.0.0.0', port=5555)
